@@ -1,0 +1,55 @@
+.header {
+  height: 72px;
+  background-color: $main-color;
+
+  &__container {
+    @extend %container;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+      border-bottom: none !important;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    @include text-style(1.6rem, 700, $white-color);
+    display: block;
+    padding: 0 5px 6px 5px;
+    transition: all .2s;
+
+    &:hover {
+      border-bottom: 3px solid $accent-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $white-color;
+  }
+
+  &__phone-box {
+    display: flex;
+    align-items: center;
+    @include text-style(1.6rem, 600, $white-color);
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+
+.active_link, .exact_active_link {
+  border-bottom: 3px solid $accent-color;
+}

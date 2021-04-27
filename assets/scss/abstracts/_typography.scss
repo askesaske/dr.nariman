@@ -1,2 +1,4 @@
 .heading-medium {
+  @include text-style(4.8rem, 600, $accent-color);
+  line-height: 57px;
 }

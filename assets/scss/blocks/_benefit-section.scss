@@ -1,0 +1,40 @@
+.benefit-section {
+  background-color: $main-color;
+  height: 280px;
+  padding-top: 60px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include text-style(1.8rem, 600, $white-color);
+    line-height: 21.5px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include text-style(1.4rem, 400, $white-color);
+    line-height: 16px;
+  }
+}

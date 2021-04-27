@@ -1,0 +1,6 @@
+.button {
+  height: 44px;
+  border-radius: 10px;
+  background-color: $main-color;
+  @include text-style(1.8rem, 600, $white-color);
+}
