@@ -1,0 +1,58 @@
+.contact-section {
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__info {
+    max-width: 355px;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @include text-style(1.8rem, 400, $text-color);
+    line-height: 21px;
+
+    &--mb30 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__schedule {
+    margin-bottom: 30px;
+  }
+
+  &__bold {
+    @include text-style(1.8rem, 600, $text-color);
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__map {
+    width: 735px;
+    height: 400px;
+    border-radius: 30px;
+    border: 3px solid $main-color;
+  }
+}

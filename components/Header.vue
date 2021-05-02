@@ -8,12 +8,12 @@
       </nuxt-link>
 
       <div class="header__links">
-        <nuxt-link to="/" tag="a" class="header__link">Главная</nuxt-link>
-        <nuxt-link to="#" tag="a" class="header__link">О нас</nuxt-link>
-        <nuxt-link to="#" tag="a" class="header__link">Хирургия</nuxt-link>
-        <nuxt-link to="#" tag="a" class="header__link">Стоматология</nuxt-link>
-        <nuxt-link to="#" tag="a" class="header__link">Наши специалисты</nuxt-link>
-        <nuxt-link to="#" tag="a" class="header__link">Контакты</nuxt-link>
+        <nuxt-link to="/" tag="a" class="header__link" exact>Главная</nuxt-link>
+        <nuxt-link to="/About" tag="a" class="header__link" exact>О нас</nuxt-link>
+        <!--        <nuxt-link to="#" tag="a" class="header__link" exact>Хирургия</nuxt-link>-->
+        <!--        <nuxt-link to="#" tag="a" class="header__link" exact>Стоматология</nuxt-link>-->
+        <span class="header__link" v-scroll-to="{el:'#team-section', duration: 700,}">Наши специалисты</span>
+        <span class="header__link" v-scroll-to="{el:'#contact-section', duration: 700,}">Контакты</span>
       </div>
 
       <a href="tel: +7 (777) 777 77 77" class="header__phone-box">
@@ -28,9 +28,7 @@
 
 <script>
 export default {
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 

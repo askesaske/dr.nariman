@@ -1,23 +1,30 @@
-.team-section {
+.our-gallery {
 
   &__container {
     @extend %container;
   }
 
   &__heading {
-    text-align: center;
-    margin-bottom: 20px;
-
-    &--mb60 {
-      margin-bottom: 60px;
-    }
+    margin-bottom: 60px;
   }
 
-  &__subtitle {
-    @include text-style(1.6rem, 400, $grey-color);
-    line-height: 19px;
-    text-align: center;
-    margin-bottom: 60px;
+  &__item {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 224px;
+    height: 49px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include text-style(1.8rem, 600, $text-color)
   }
 
   &__wrapper {
@@ -70,13 +77,4 @@
     right: calc(100% + 40px);
     transform: rotate(180deg);
   }
-
-  &__row {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-
 }

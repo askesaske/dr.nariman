@@ -10,14 +10,14 @@
             Учитывая ключевые сценарии поведения, укрепление и развитие внутренней структуры создаёт предпосылки для
             экспериментов, поражающих по своей масштабности и грандиозности.
           </p>
-          <button class="welcome-section__btn button">
+          <button class="welcome-section__btn button" v-scroll-to="{el:'#services-section', duration: 700,}">
             Посмотреть услуги
           </button>
         </div>
       </div>
     </section>
 
-    <section class="main__section services-section">
+    <section class="main__section services-section" id="services-section">
       <div class="services-section__container">
         <h2 class="services-section__heading heading-medium">
           Услуги
@@ -38,7 +38,7 @@
 
         <div class="services-section__list" v-show="surgeryChosen">
 
-          <div class="services-section__card service-card">
+          <nuxt-link tag="div" :to="{ path: '/Services/1', hash: '#service-page' }" class="services-section__card service-card">
             <div class="service-card__icon">
               <svg width="72" height="68">
                 <use href="../assets/img/icons.svg#lip-prick"></use>
@@ -48,7 +48,7 @@
             <div class="service-card__name">
               Врожденная расщелина верхней губы и неба
             </div>
-          </div>
+          </nuxt-link>
 
           <div class="services-section__card service-card">
             <div class="service-card__icon">
@@ -375,7 +375,7 @@
       </div>
     </section>
 
-    <section class="main__section team-section">
+    <section class="main__section team-section" id="team-section">
       <div class="team-section__container">
 
         <h2 class="team-section__heading heading-medium">
@@ -410,9 +410,9 @@
                     </div>
                   </div>
 
-                  <button class="team-card__btn button">
+                  <nuxt-link tag="button" to="/Specialists/1" class="team-card__btn button">
                     Подробнее
-                  </button>
+                  </nuxt-link>
                 </div>
               </div>
 
@@ -612,9 +612,9 @@
             внутренней структуры создаёт необходимость включения в производственный план целого ряда внеочередных
           </p>
 
-          <button class="about-section__btn button">
+          <nuxt-link tag="button" to="/About" class="about-section__btn button">
             Подробнее
-          </button>
+          </nuxt-link>
         </div>
 
         <div class="about-section__wrapper">
@@ -722,6 +722,191 @@
         </div>
       </div>
     </section>
+
+    <section class="main__section works-section">
+
+      <div class="works-section__container">
+        <h2 class="works-section__heading heading-blue">Наши работы</h2>
+        <p class="works-section__subtitle">
+          В клинике «dr.Nariman» представлены услуги для детей и взрослых. Запишитесь на прием к терапевту или узкому
+          специалисту. Доктор выслушает вас, направит на обследование, а затем подберет индивидуальный план лечения.
+        </p>
+
+        <div class="works-section__wrapper">
+
+          <div class="swiper-container works-section__swiper-container">
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide works-section__item works-card">
+
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../assets/img/work-2.png" alt="" class="works-card__img">
+                  </div>
+
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
+                  </div>
+                </div>
+
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
+                  </div>
+
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
+
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide works-section__item works-card">
+
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../assets/img/work-2.png" alt="" class="works-card__img">
+                  </div>
+
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
+                  </div>
+                </div>
+
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
+                  </div>
+
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
+
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide works-section__item works-card">
+
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../assets/img/work-2.png" alt="" class="works-card__img">
+                  </div>
+
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
+                  </div>
+                </div>
+
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
+                  </div>
+
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
+
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination works-section__pagination"></div>
+
+          </div>
+
+          <div class="works-section__next" @click="nextSlideWork"></div>
+          <div class="works-section__prev" @click="prevSlideWork"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="main__section contact-section" id="contact-section">
+      <div class="contact-section__container">
+
+        <div class="contact-section__info">
+          <h2 class="contact-section__heading heading-medium">
+            Наши контакты
+          </h2>
+
+          <p class="contact-section__text contact-section__text--mb30">
+            Если у вас остались вопросы, свяжитесь с нами прямо сейчас!
+          </p>
+
+          <div class="contact-section__schedule">
+            <p class="contact-section__text">
+              Мы на связи:
+            </p>
+            <p class="contact-section__bold">
+              Пн-Пт: 09:00-18:00
+            </p>
+          </div>
+
+          <div class="contact-section__items">
+
+            <a href="tel: +7 (777) 777 77 77" class="contact-section__item">
+              <svg width="22" height="22">
+                <use href="../assets/img/icons.svg#phone-2"></use>
+              </svg>
+              <span class="contact-section__bold">
+                +7 (777) 777 77 77
+              </span>
+            </a>
+
+            <div class="contact-section__item">
+              <svg width="22" height="22">
+                <use href="../assets/img/icons.svg#email"></use>
+              </svg>
+              <span class="contact-section__bold">
+                dr.nariman@gmail.com
+              </span>
+            </div>
+
+            <div class="contact-section__item">
+              <svg width="22" height="22">
+                <use href="../assets/img/icons.svg#map-pin"></use>
+              </svg>
+              <span class="contact-section__bold">
+                г. Алматы, ул. Толе би 240
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0806055c8c63cdb1534543c9ac3b9dd43f50a664ea21bda83a10abdb7e26384e&amp;source=constructor"
+                class="contact-section__map"
+                frameborder="0"></iframe>
+
+      </div>
+    </section>
   </main>
 </template>
 
@@ -737,7 +922,8 @@ export default {
       dentistryChosen: false,
       teamSwiper: null,
       aboutSwiper: null,
-      aboutCounter: 1
+      aboutCounter: 1,
+      worksSwiper: null
     };
   },
   methods: {
@@ -772,7 +958,13 @@ export default {
       } else {
         this.aboutCounter = 1
       }
-    }
+    },
+    nextSlideWork() {
+      this.worksSwiper.slideNext()
+    },
+    prevSlideWork() {
+      this.worksSwiper.slidePrev()
+    },
   },
   mounted() {
     this.teamSwiper = new Swiper('.team-section__swiper-container', {
@@ -802,6 +994,25 @@ export default {
       // pagination: {
       //   el: '.team-section__pagination',
       // },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        }
+      }
+    });
+
+    this.worksSwiper = new Swiper('.works-section__swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 8,
+      loop: true,
+      pagination: {
+        el: '.works-section__pagination',
+      },
       breakpoints: {
         768: {
           slidesPerView: 3,

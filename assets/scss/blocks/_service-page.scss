@@ -1,0 +1,41 @@
+.service-page {
+  padding: 80px 0 140px;
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__container {
+    @extend %container;
+    position: relative;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__info {
+    width: 555px;
+  }
+
+  &__title {
+    @include text-style(2.4rem, 600, $text-color);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text-style(1.8rem, 400, $text-color);
+    line-height: 21px;
+  }
+
+  &__img {
+    max-width: 610px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(555px + 95px);
+  }
+}
