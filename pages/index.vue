@@ -14,6 +14,12 @@
             Посмотреть услуги
           </button>
         </div>
+
+        <img src="../assets/img/welcome-section-sm.png" alt="" class="welcome-section__img">
+
+        <button class="welcome-section__btn welcome-section__btn--sm button" v-scroll-to="{el:'#services-section', duration: 700,}">
+          Посмотреть услуги
+        </button>
       </div>
     </section>
 
@@ -646,6 +652,8 @@
 
             </div>
 
+            <div class="swiper-pagination about-section__pagination"></div>
+
           </div>
 
           <div class="about-section__controls">
@@ -656,6 +664,10 @@
             <div class="about-section__next" @click="nextSlideAbout"></div>
           </div>
         </div>
+
+        <nuxt-link tag="button" to="/About" class="about-section__btn about-section__btn--sm button">
+          Подробнее
+        </nuxt-link>
 
       </div>
     </section>
@@ -857,7 +869,7 @@
           </h2>
 
           <p class="contact-section__text contact-section__text--mb30">
-            Если у вас остались вопросы, свяжитесь с нами прямо сейчас!
+            Если у вас остались вопросы, <br> свяжитесь с нами прямо сейчас!
           </p>
 
           <div class="contact-section__schedule">
@@ -969,7 +981,7 @@ export default {
   mounted() {
     this.teamSwiper = new Swiper('.team-section__swiper-container', {
       slidesPerView: 2,
-      spaceBetween: 8,
+      spaceBetween: 7,
       loop: true,
       pagination: {
         el: '.team-section__pagination',
@@ -987,27 +999,32 @@ export default {
     });
 
     this.aboutSwiper = new Swiper('.about-section__swiper-container', {
-      slidesPerView: 2,
-      spaceBetween: 8,
-      allowTouchMove: false,
-      // loop: true,
-      // pagination: {
-      //   el: '.team-section__pagination',
-      // },
+      slidesPerView: 1,
+      spaceBetween: 40,
+      allowTouchMove: true,
+      loop: true,
+      pagination: {
+        el: '.about-section__pagination',
+      },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 20,
+          allowTouchMove: true,
+          pagination: {
+            el: '.about-section__pagination',
+          },
+          loop: true
         },
         1200: {
-          slidesPerView: 1,
-          spaceBetween: 40,
+          allowTouchMove: false,
+          loop: false
         }
       }
     });
 
     this.worksSwiper = new Swiper('.works-section__swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 8,
       loop: true,
       pagination: {
@@ -1015,7 +1032,7 @@ export default {
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         1200: {

@@ -78,5 +78,15 @@
     justify-content: space-between;
   }
 
+  @include respond(phone) {
+    &__subtitle {
+      font-size: 1.4rem;
+      line-height: 16.5px;
+      margin-bottom: 40px;
+    }
 
+    &__swiper-container {
+      padding-bottom: 50px;
+    }
+  }
 }

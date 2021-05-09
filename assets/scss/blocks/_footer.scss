@@ -10,6 +10,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__logo {
@@ -52,6 +53,35 @@
 
     svg {
       margin-right: 8px;
+    }
+
+    &--sm {
+      display: none;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__contact-box {
+      margin-top: 20px;
+    }
+  }
+
+  @include respond(phone) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    &__contact-box {
+      display: none;
+
+      &--sm {
+        display: flex;
+        margin-bottom: 30px;
+      }
     }
   }
 }

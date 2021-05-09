@@ -1,6 +1,7 @@
 .header {
   height: 72px;
   background-color: $main-color;
+  position: relative;
 
   &__container {
     @extend %container;
@@ -49,8 +50,40 @@
       margin-right: 10px;
     }
   }
+
+  &__sidebar {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  @include respond(phone) {
+    &__links {
+      display: none;
+    }
+
+    &__phone-box {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+
+    &__sidebar {
+      display: block;
+    }
+  }
 }
 
 .active_link, .exact_active_link {
   border-bottom: 3px solid $accent-color;
+
+  @include respond(phone) {
+    border-bottom: none;
+    border-bottom: 2px solid $text-color;
+    font-weight: 700 !important;
+  }
 }

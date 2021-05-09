@@ -66,4 +66,24 @@
     right: calc(100% + 40px);
     transform: rotate(180deg);
   }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 20px;
+      text-align: left;
+      color: $accent-color;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      line-height: 16.5px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    &__swiper-container {
+      padding-bottom: 50px;
+      padding-top: 0;
+    }
+  }
 }

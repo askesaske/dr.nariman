@@ -31,6 +31,13 @@
         </div>
       </div>
 
+      <a href="tel: +7 (777) 777 77 77" class="footer__contact-box footer__contact-box--sm">
+        <svg width="22" height="22">
+          <use href="../assets/img/icons.svg#phone-3"></use>
+        </svg>
+        +7 (777) 777 77 77
+      </a>
+
       <div class="footer__socials">
         <a href="#" class="footer__social">
           <svg width="36" height="36">

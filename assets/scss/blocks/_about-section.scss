@@ -25,6 +25,10 @@
 
   &__btn {
     width: 200px;
+
+    &--sm {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -69,6 +73,23 @@
     align-items: center;
   }
 
+  &__pagination {
+    width: 100%;
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: $accent-color;
+      opacity: .3;
+      margin: 0 5px;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+
   &__next,
   &__prev {
     background-image: url("~/assets/img/icons/slider-next.svg");
@@ -89,6 +110,63 @@
 
     span {
       font-size: 2.4rem;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__container {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info {
+      width: unset;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    &__wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .products-slider__pagination {
+      bottom: 0;
+    }
+
+    &__swiper-container {
+      padding-bottom: 72px;
+    }
+
+    &__controls {
+      display: none;
+    }
+  }
+
+  @include respond(phone) {
+    &__heading {
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 16px;
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      display: none;
+      width: 100%;
+
+      &--sm {
+        display: block;
+      }
+    }
+
+    &__swiper-container {
+      padding-bottom: 50px;
+      margin-bottom: 40px;
     }
   }
 }

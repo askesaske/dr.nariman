@@ -47,4 +47,28 @@
   &__btn {
     width: 100%;
   }
+
+  @include respond(phone) {
+    &__info {
+      padding: 15px 10px;
+      height: 160px;
+    }
+
+    &__badge {
+      font-size: 1.2rem;
+      width: 77px;
+      height: 22px;
+    }
+
+    &__name {
+      font-size: 1.4rem;
+      line-height: 16.7px;
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 14px;
+    }
+  }
 }
