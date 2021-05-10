@@ -27,4 +27,16 @@
       }
     }
   }
+
+  @include respond(phone) {
+    width: 100%;
+    height: unset;
+    padding: 20px 10px;
+
+    &__title {
+      font-size: 1.4rem;
+      line-height: 16.7px;
+      margin-bottom: 12px;
+    }
+  }
 }

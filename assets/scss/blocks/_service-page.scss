@@ -5,6 +5,10 @@
     &:not(:last-child) {
       margin-bottom: 100px;
     }
+
+    .team-section__wrapper {
+      display: none;
+    }
   }
 
   &__container {
@@ -34,8 +38,57 @@
   &__img {
     max-width: 610px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     left: calc(555px + 95px);
+  }
+
+  @include respond(tab-land) {
+    &__section {
+      .team-section__wrapper {
+        display: block;
+      }
+
+      .team-section__row {
+        display: none;
+      }
+    }
+    &__info {
+      width: unset;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      max-width: 100%;
+      position: unset;
+      transform: unset;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 40px 0 100px;
+
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__heading {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 16.5px;
+    }
   }
 }

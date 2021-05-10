@@ -28,4 +28,42 @@
     left: 570px + 111px;
     top: 0;
   }
+
+  @include respond(tab-land) {
+    &__heading {
+      text-align: left;
+    }
+
+    &__text {
+      max-width: unset;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      position: unset;
+      display: block;
+      margin: 0 auto;
+      //left: 570px + 111px;
+      //top: 0;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 40px 0 100px;
+
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include text-style(1.4rem, 400, $text-color);
+      line-height: 16.5px;
+    }
+  }
 }

@@ -60,4 +60,17 @@
     right: calc(100% + 40px);
     transform: rotate(180deg);
   }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 30px;
+    }
+
+    &__swiper-container {
+      padding-bottom: 50px;
+      padding-top: 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 }

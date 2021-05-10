@@ -79,6 +79,13 @@
   }
 
   @include respond(phone) {
+
+    &__heading {
+      &--mb60 {
+        margin-bottom: 30px;
+      }
+    }
+
     &__subtitle {
       font-size: 1.4rem;
       line-height: 16.5px;

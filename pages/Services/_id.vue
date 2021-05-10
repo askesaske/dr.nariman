@@ -2,11 +2,13 @@
   <div class="service-page">
 
     <section class="service-page__section" id="service-page">
-      <h2 class="service-page__heading heading-medium">
-        Реконструктивная ринохейлопластика
-      </h2>
+
 
       <div class="service-page__container">
+        <h2 class="service-page__heading heading-medium">
+          Реконструктивная ринохейлопластика
+        </h2>
+
         <div class="service-page__info">
           <div class="service-page__title">
             Процесс лечения
@@ -136,6 +138,116 @@
               </button>
             </div>
           </div>
+        </div>
+
+        <div class="team-section__wrapper">
+
+          <div class="swiper-container team-section__swiper-container">
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide team-section__item team-card">
+                <img src="../../assets/img/team-member.png" alt="" class="team-card__img">
+
+                <div class="team-card__info">
+                  <div class="team-card__badge">
+                    Стаж 15 лет
+                  </div>
+
+                  <div>
+                    <div class="team-card__name">
+                      Сатылган Нариман Жаксылыкулы
+                    </div>
+
+                    <div class="team-card__text">
+                      Челюстно-лицевой хирург
+                    </div>
+                  </div>
+
+                  <nuxt-link tag="button" to="/Specialists/1" class="team-card__btn button">
+                    Подробнее
+                  </nuxt-link>
+                </div>
+              </div>
+
+              <div class="swiper-slide team-section__item team-card">
+                <img src="../../assets/img/team-member.png" alt="" class="team-card__img">
+
+                <div class="team-card__info">
+                  <div class="team-card__badge">
+                    Стаж 15 лет
+                  </div>
+
+                  <div>
+                    <div class="team-card__name">
+                      Сатылган Нариман Жаксылыкулы
+                    </div>
+
+                    <div class="team-card__text">
+                      Челюстно-лицевой хирург
+                    </div>
+                  </div>
+
+                  <button class="team-card__btn button">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide team-section__item team-card">
+                <img src="../../assets/img/team-member.png" alt="" class="team-card__img">
+
+                <div class="team-card__info">
+                  <div class="team-card__badge">
+                    Стаж 15 лет
+                  </div>
+
+                  <div>
+                    <div class="team-card__name">
+                      Сатылган Нариман Жаксылыкулы
+                    </div>
+
+                    <div class="team-card__text">
+                      Челюстно-лицевой хирург
+                    </div>
+                  </div>
+
+                  <button class="team-card__btn button">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide team-section__item team-card">
+                <img src="../../assets/img/team-member.png" alt="" class="team-card__img">
+
+                <div class="team-card__info">
+                  <div class="team-card__badge">
+                    Стаж 15 лет
+                  </div>
+
+                  <div>
+                    <div class="team-card__name">
+                      Сатылган Нариман Жаксылыкулы
+                    </div>
+
+                    <div class="team-card__text">
+                      Челюстно-лицевой хирург
+                    </div>
+                  </div>
+
+                  <button class="team-card__btn button">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination team-section__pagination"></div>
+          </div>
+
+          <div class="team-section__next" @click="nextSlideTeam"></div>
+          <div class="team-section__prev" @click="prevSlideTeam"></div>
+
         </div>
 
 
@@ -286,10 +398,16 @@ export default {
     prevSlideWork() {
       this.worksSwiper.slidePrev()
     },
+    nextSlideTeam() {
+      this.teamSwiper.slideNext()
+    },
+    prevSlideTeam() {
+      this.teamSwiper.slidePrev()
+    },
   },
   mounted() {
     this.worksSwiper = new Swiper('.works-section__swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 8,
       loop: true,
       pagination: {
@@ -297,11 +415,30 @@ export default {
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         1200: {
           slidesPerView: 1,
+          spaceBetween: 40,
+        }
+      }
+    });
+
+    this.teamSwiper = new Swiper('.team-section__swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 7,
+      loop: true,
+      pagination: {
+        el: '.team-section__pagination',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
           spaceBetween: 40,
         }
       }

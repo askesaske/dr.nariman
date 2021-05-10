@@ -25,7 +25,7 @@
 
     <section class="about-page__section our-mission">
       <div class="our-mission__container">
-        <h2 class="our-mission__heading heading-blue">
+        <h2 class="our-mission__heading heading-blue heading-blue--sm">
           Наша миссия
         </h2>
 
@@ -244,16 +244,16 @@ export default {
   },
   mounted() {
     this.serviceSwiper = new Swiper('.our-services__swiper-container', {
-      slidesPerView: 2,
-      spaceBetween: 8,
+      slidesPerView: 1,
+      spaceBetween: 20,
       loop: true,
       pagination: {
         el: '.our-services__pagination',
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+          slidesPerView: 1,
+          spaceBetween: 40,
         },
         1200: {
           slidesPerView: 1,
@@ -263,7 +263,7 @@ export default {
     });
 
     this.gallerySwiper = new Swiper('.our-gallery__swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 8,
       loop: true,
       pagination: {

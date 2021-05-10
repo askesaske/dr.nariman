@@ -42,4 +42,58 @@
       line-height: 21px;
     }
   }
+
+  @include respond(tab-land) {
+    &__inner {
+      width: 768px;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 100%;
+      height: unset;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      display: grid;
+      grid-auto-flow: unset;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: unset;
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+
+      li {
+        @include text-style(1.8rem, 400, $text-color);
+        line-height: 21px;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__inner {
+      width: 343px;
+      padding: 10px 10px 20px;
+    }
+
+    &__img {
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      line-height: 21px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 10px;
+
+      li {
+        font-size: 1.4rem;
+        line-height: 16.5px;
+      }
+    }
+  }
 }

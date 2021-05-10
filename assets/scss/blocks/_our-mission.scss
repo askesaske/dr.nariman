@@ -20,4 +20,24 @@
       margin-right: 40px;
     }
   }
+
+  @include respond(tab-land) {
+    &__card {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    &__card {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-bottom: 16px;
+    }
+  }
 }
