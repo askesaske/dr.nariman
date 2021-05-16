@@ -1,12 +1,12 @@
 <template>
   <div class="specialist-page">
-    <div class="specialist-page__container">
+    <section class="specialist-page__section specialist-page__container">
 
       <h2 class="specialist-page__heading heading-medium">
         Наши специалисты
       </h2>
 
-      <section class="specialist-page__section specialist-page__row">
+      <div class="specialist-page__row">
 
         <img src="../../assets/img/spec-1.png" alt="" class="specialist-page__img">
 
@@ -97,135 +97,137 @@
           </div>
 
         </div>
-      </section>
+      </div>
 
-      <section class="specialist-page__section works-section">
+    </section>
 
-        <div class="works-section__container">
-          <h2 class="works-section__heading heading-blue">Наши работы</h2>
-          <p class="works-section__subtitle">
-            В клинике «dr.Nariman» представлены услуги для детей и взрослых. Запишитесь на прием к терапевту или узкому
-            специалисту. Доктор выслушает вас, направит на обследование, а затем подберет индивидуальный план лечения.
-          </p>
+    <section class="specialist-page__section works-section">
 
-          <div class="works-section__wrapper">
+      <div class="works-section__container">
+        <h2 class="works-section__heading heading-blue">Наши работы</h2>
+        <p class="works-section__subtitle">
+          В клинике «dr.Nariman» представлены услуги для детей и взрослых. Запишитесь на прием к терапевту или узкому
+          специалисту. Доктор выслушает вас, направит на обследование, а затем подберет индивидуальный план лечения.
+        </p>
 
-            <div class="swiper-container works-section__swiper-container">
+        <div class="works-section__wrapper">
 
-              <div class="swiper-wrapper">
-                <div class="swiper-slide works-section__item works-card">
+          <div class="swiper-container works-section__swiper-container">
 
-                  <div class="works-card__images">
-                    <div class="works-card__img-box">
-                      <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                      <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                    </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide works-section__item works-card">
 
-                    <div class="works-card__badge">
-                      До
-                    </div>
-                    <div class="works-card__badge works-card__badge--blue">
-                      После
-                    </div>
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
                   </div>
 
-                  <div class="works-card__info">
-                    <div class="works-card__name">
-                      Хазова Малика
-                    </div>
-
-                    <div class="works-card__type">
-                      Микротия
-                    </div>
-
-                    <div class="works-card__text">
-                      Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                      существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
-                      новых принципов формирования материально-технической и кадровой базы.
-                    </div>
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
                   </div>
                 </div>
 
-                <div class="swiper-slide works-section__item works-card">
-
-                  <div class="works-card__images">
-                    <div class="works-card__img-box">
-                      <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                      <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                    </div>
-
-                    <div class="works-card__badge">
-                      До
-                    </div>
-                    <div class="works-card__badge works-card__badge--blue">
-                      После
-                    </div>
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
                   </div>
 
-                  <div class="works-card__info">
-                    <div class="works-card__name">
-                      Хазова Малика
-                    </div>
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
 
-                    <div class="works-card__type">
-                      Микротия
-                    </div>
-
-                    <div class="works-card__text">
-                      Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                      существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
-                      новых принципов формирования материально-технической и кадровой базы.
-                    </div>
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
+                    востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
                   </div>
                 </div>
-
-                <div class="swiper-slide works-section__item works-card">
-
-                  <div class="works-card__images">
-                    <div class="works-card__img-box">
-                      <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                      <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                    </div>
-
-                    <div class="works-card__badge">
-                      До
-                    </div>
-                    <div class="works-card__badge works-card__badge--blue">
-                      После
-                    </div>
-                  </div>
-
-                  <div class="works-card__info">
-                    <div class="works-card__name">
-                      Хазова Малика
-                    </div>
-
-                    <div class="works-card__type">
-                      Микротия
-                    </div>
-
-                    <div class="works-card__text">
-                      Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                      существующих паттернов поведения. Но граница обучения кадров предопределяет высокую востребованность
-                      новых принципов формирования материально-технической и кадровой базы.
-                    </div>
-                  </div>
-                </div>
-
               </div>
 
-              <div class="swiper-pagination works-section__pagination"></div>
+              <div class="swiper-slide works-section__item works-card">
 
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
+                  </div>
+
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
+                  </div>
+                </div>
+
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
+                  </div>
+
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
+
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
+                    востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide works-section__item works-card">
+
+                <div class="works-card__images">
+                  <div class="works-card__img-box">
+                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
+                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
+                  </div>
+
+                  <div class="works-card__badge">
+                    До
+                  </div>
+                  <div class="works-card__badge works-card__badge--blue">
+                    После
+                  </div>
+                </div>
+
+                <div class="works-card__info">
+                  <div class="works-card__name">
+                    Хазова Малика
+                  </div>
+
+                  <div class="works-card__type">
+                    Микротия
+                  </div>
+
+                  <div class="works-card__text">
+                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
+                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
+                    востребованность
+                    новых принципов формирования материально-технической и кадровой базы.
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="works-section__next" @click="nextSlideWork"></div>
-            <div class="works-section__prev" @click="prevSlideWork"></div>
+            <div class="swiper-pagination works-section__pagination"></div>
 
           </div>
-        </div>
-      </section>
 
-    </div>
+          <div class="works-section__next" @click="nextSlideWork"></div>
+          <div class="works-section__prev" @click="prevSlideWork"></div>
+
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -248,7 +250,7 @@ export default {
   },
   mounted() {
     this.worksSwiper = new Swiper('.works-section__swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 8,
       loop: true,
       pagination: {
@@ -256,7 +258,7 @@ export default {
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         1200: {

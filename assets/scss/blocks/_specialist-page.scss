@@ -81,4 +81,61 @@
       }
     }
   }
+
+  @include respond(tab-land) {
+    &__row {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+
+    &__img {
+      flex-shrink: unset;
+      margin: 20px auto 0;
+      display: block;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 40px 0 100px;
+
+    &__heading {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__name {
+      margin-bottom: 20px;
+    }
+
+    &__phone-box {
+      margin: 20px 0;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      line-height: 16px;
+    }
+
+    &__bold {
+      font-size: 1.4rem;
+      line-height: 16px;
+    }
+
+    &__list {
+      li {
+        font-size: 1.4rem;
+        line-height: 16px;
+
+        &:not(:last-child) {
+        }
+      }
+    }
+  }
 }
