@@ -52,6 +52,9 @@ export default {
     mode: 'out-in'
   },
 
+  env: {
+    API: 'http://sabadoryo.com/api/'
+  },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
