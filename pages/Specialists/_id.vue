@@ -12,7 +12,7 @@
 
         <div class="specialist-page__info">
           <div class="specialist-page__name">
-            Рябцева Валерия Владимировна
+            {{ specialistData.full_name }}
           </div>
 
           <div class="specialist-page__group">
@@ -22,7 +22,7 @@
                 Должность
               </div>
               <div class="specialist-page__bold">
-                Хирург, проктолог
+                {{ specialistData.position }}
               </div>
             </div>
 
@@ -31,7 +31,7 @@
                 Квалификационная категория
               </div>
               <div class="specialist-page__bold">
-                Высшая категория
+                {{ specialistData.qualification_category }}
               </div>
             </div>
 
@@ -40,7 +40,7 @@
                 Стаж работы по специальности
               </div>
               <div class="specialist-page__bold">
-                более 13 лет
+                более {{ specialistData.working_experience_time }} лет
               </div>
             </div>
 
@@ -101,143 +101,20 @@
 
     </section>
 
-    <section class="specialist-page__section works-section">
-
-      <div class="works-section__container">
-        <h2 class="works-section__heading heading-blue">Наши работы</h2>
-        <p class="works-section__subtitle">
-          В клинике «dr.Nariman» представлены услуги для детей и взрослых. Запишитесь на прием к терапевту или узкому
-          специалисту. Доктор выслушает вас, направит на обследование, а затем подберет индивидуальный план лечения.
-        </p>
-
-        <div class="works-section__wrapper">
-
-          <div class="swiper-container works-section__swiper-container">
-
-            <div class="swiper-wrapper">
-              <div class="swiper-slide works-section__item works-card">
-
-                <div class="works-card__images">
-                  <div class="works-card__img-box">
-                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                  </div>
-
-                  <div class="works-card__badge">
-                    До
-                  </div>
-                  <div class="works-card__badge works-card__badge--blue">
-                    После
-                  </div>
-                </div>
-
-                <div class="works-card__info">
-                  <div class="works-card__name">
-                    Хазова Малика
-                  </div>
-
-                  <div class="works-card__type">
-                    Микротия
-                  </div>
-
-                  <div class="works-card__text">
-                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
-                    востребованность
-                    новых принципов формирования материально-технической и кадровой базы.
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide works-section__item works-card">
-
-                <div class="works-card__images">
-                  <div class="works-card__img-box">
-                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                  </div>
-
-                  <div class="works-card__badge">
-                    До
-                  </div>
-                  <div class="works-card__badge works-card__badge--blue">
-                    После
-                  </div>
-                </div>
-
-                <div class="works-card__info">
-                  <div class="works-card__name">
-                    Хазова Малика
-                  </div>
-
-                  <div class="works-card__type">
-                    Микротия
-                  </div>
-
-                  <div class="works-card__text">
-                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
-                    востребованность
-                    новых принципов формирования материально-технической и кадровой базы.
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide works-section__item works-card">
-
-                <div class="works-card__images">
-                  <div class="works-card__img-box">
-                    <img src="../../assets/img/work-1.png" alt="" class="works-card__img">
-                    <img src="../../assets/img/work-2.png" alt="" class="works-card__img">
-                  </div>
-
-                  <div class="works-card__badge">
-                    До
-                  </div>
-                  <div class="works-card__badge works-card__badge--blue">
-                    После
-                  </div>
-                </div>
-
-                <div class="works-card__info">
-                  <div class="works-card__name">
-                    Хазова Малика
-                  </div>
-
-                  <div class="works-card__type">
-                    Микротия
-                  </div>
-
-                  <div class="works-card__text">
-                    Дальнейшее развитие различных форм деятельности играет важную роль в формировании анализа
-                    существующих паттернов поведения. Но граница обучения кадров предопределяет высокую
-                    востребованность
-                    новых принципов формирования материально-технической и кадровой базы.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-pagination works-section__pagination"></div>
-
-          </div>
-
-          <div class="works-section__next" @click="nextSlideWork"></div>
-          <div class="works-section__prev" @click="prevSlideWork"></div>
-
-        </div>
-      </div>
-    </section>
+    <work-section class="specialist-page__section"></work-section>
   </div>
 </template>
 
 <script>
-import Swiper from "swiper";
+import WorkSection from "@/components/WorkSection";
 
 export default {
+  components: {
+    WorkSection
+  },
   data() {
     return {
-      worksSwiper: null
+      specialistData: {}
     };
   },
   methods: {
@@ -249,24 +126,12 @@ export default {
     },
   },
   mounted() {
-    this.worksSwiper = new Swiper('.works-section__swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 8,
-      loop: true,
-      pagination: {
-        el: '.works-section__pagination',
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        1200: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        }
-      }
-    });
+    this.$axios.get(process.env.API + 'specialist?filter[id]=' + this.$route.params.id + '?include=media')
+      .then(response => {
+        console.log(response.data.data[0])
+        this.specialistData = response.data.data[0]
+      })
+      .catch(e => console.log(e))
   }
 }
 </script>

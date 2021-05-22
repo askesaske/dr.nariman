@@ -45,12 +45,26 @@
              :key="i"
              v-show="serviceChosen === s.name">
 
-          <nuxt-link tag="div"
-                     :to="'/Services/' + d.id"
-                     v-for="(d, k) in s.diseases"
-                     :key="d.id"
-                     v-if="s.id === parseInt(d.service_id)"
-                     class="services-section__card service-card">
+          <!--          <nuxt-link tag="div"-->
+          <!--                     :to="'/Services/' + d.id"-->
+          <!--                     v-for="(d, k) in s.diseases"-->
+          <!--                     :key="d.id"-->
+          <!--                     v-if="s.id === parseInt(d.service_id)"-->
+          <!--                     class="services-section__card service-card">-->
+          <!--            <div class="service-card__icon" v-for="img in d.media">-->
+          <!--              <img :src="img.url" alt="">-->
+          <!--            </div>-->
+
+          <!--            <div class="service-card__name">-->
+          <!--              {{ d.name }}-->
+          <!--            </div>-->
+          <!--          </nuxt-link>-->
+
+          <div v-for="(d, k) in s.diseases"
+               :key="d.id"
+               v-if="s.id === parseInt(d.service_id)"
+               class="services-section__card service-card"
+               @click="$router.push('/Services/' + d.service_id)">
             <div class="service-card__icon" v-for="img in d.media">
               <img :src="img.url" alt="">
             </div>
@@ -58,7 +72,7 @@
             <div class="service-card__name">
               {{ d.name }}
             </div>
-          </nuxt-link>
+          </div>
 
         </div>
 

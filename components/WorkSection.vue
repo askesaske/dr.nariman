@@ -63,6 +63,7 @@ import Swiper, {Pagination, Autoplay, Navigation} from 'swiper';
 Swiper.use([Pagination, Autoplay, Navigation]);
 
 export default {
+  scrollToTop: true,
   data() {
     return {
       worksSwiper: null,

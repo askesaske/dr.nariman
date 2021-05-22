@@ -6,7 +6,7 @@
 
       <div class="service-page__container">
         <h2 class="service-page__heading heading-medium">
-          Реконструктивная ринохейлопластика
+          {{ serviceData.name }}
         </h2>
 
         <div class="service-page__info">
@@ -52,14 +52,19 @@ export default {
   },
   data() {
     return {
-
+      serviceData: {}
     };
   },
   methods: {
-
   },
   mounted() {
+    this.$axios.get(process.env.API + 'disease?filter[id]=' + this.$route.params.id + '?include=media')
+      .then(response => {
+        console.log(response.data.data[0])
+        this.serviceData = response.data.data[0]
+      })
+      .catch(e => console.log(e))
+  },
 
-  }
 }
 </script>
