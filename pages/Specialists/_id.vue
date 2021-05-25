@@ -61,11 +61,9 @@
               </div>
 
               <ul class="specialist-page__list">
-                <li>•2012-2017гг. SEMА Hospital</li>
-                <li>•2012г. Лечебно-диагностический центр</li>
-                <li>•2011-2012гг. Клиника Достар Мед</li>
-                <li>•2011г. Клиника ЖАН</li>
-                <li>•2007-2011гг. Центральная Районна Больница г. Талгар, врач хирург отделения экстренной хирургии</li>
+                <li v-for="workExp in specialistData.working_experience_description">
+                  •{{ workExp }}
+                </li>
               </ul>
             </div>
 
@@ -75,8 +73,7 @@
               </div>
 
               <ul class="specialist-page__list">
-                <li>•АГМИ, Интернатура, Общая хирургия (2006-2007)</li>
-                <li>•КазНМУ имени Асфендиярова (2000-2006)</li>
+                <li v-for="edu in specialistData.education">•{{ edu }}</li>
               </ul>
             </div>
 
@@ -86,11 +83,9 @@
               </div>
 
               <ul class="specialist-page__list">
-                <li>•Эндоскопия в хирургии (2018)</li>
-                <li>•Воспалительные заболевания толстого кишечника (2018)</li>
-                <li>•Фиброгастродуоденоскоприя (2012)</li>
-                <li>•Общая хирургия (2011)</li>
-                <li>•Лапароскопическая хирургия (2007)</li>
+                <li v-for="course in specialistData.courses">
+                  •{{ course }}
+                </li>
               </ul>
             </div>
 

@@ -17,7 +17,8 @@
 
               <div class="works-card__images">
                 <div class="works-card__img-box">
-                  <img :src="img.url" alt="" class="works-card__img" v-for="(img, i) in w.media" :key="img.id">
+                  <img :src="img.url" alt="" class="works-card__img" v-for="(img, i) in w.media" :key="img.id" v-show="img.destiny === 'image_before'">
+                  <img :src="img.url" alt="" class="works-card__img" v-for="(img, i) in w.media" :key="img.id" v-show="img.destiny === 'image_after'">
                 </div>
 
                 <div class="works-card__badge">

@@ -16,11 +16,11 @@
         <span class="header__link" v-scroll-to="{el:'#contact-section', duration: 700,}">Контакты</span>
       </div>
 
-      <a :href="'tel: ' + phoneNumber[0].value" class="header__phone-box">
+      <a :href="'tel: ' + phoneNumberWithMask[0].value" class="header__phone-box">
         <svg width="16" height="16">
           <use href="../assets/img/icons.svg#phone"></use>
         </svg>
-        {{ phoneNumber[0].value }}
+        {{ phoneNumberWithMask[0].value }}
       </a>
 
       <svg class="header__burger" width="20" height="20" @click="sideBarOpen = true">
@@ -42,11 +42,11 @@
         <span class="sidebar__link" v-scroll-to="{el:'#contact-section', duration: 700,}" @click="sideBarOpen = false">Контакты</span>
       </div>
 
-      <a :href="'tel: ' + phoneNumber[0].value" class="sidebar__phone-box">
+      <a :href="'tel: ' + phoneNumberWithMask[0].value" class="sidebar__phone-box">
         <svg width="22" height="22">
           <use href="../assets/img/icons.svg#phone-5"></use>
         </svg>
-        {{ phoneNumber[0].value }}
+        {{ phoneNumberWithMask[0].value }}
       </a>
 
       <div class="sidebar__socials">
@@ -56,7 +56,7 @@
           </svg>
         </a>
 
-        <a href="#" class="sidebar__social">
+        <a :href="'https://wa.me/' + phoneNumber[0].value" class="sidebar__social">
           <svg width="44" height="44">
             <use href="../assets/img/icons.svg#wpp-2"></use>
           </svg>
@@ -76,6 +76,9 @@ export default {
   computed: {
     phoneNumber() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'number')
+    },
+    phoneNumberWithMask() {
+      return this.$store.getters.loadedSettings.filter(item => item.key === 'number_mask1')
     },
     instLink() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'instagram')

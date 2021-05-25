@@ -226,12 +226,12 @@
 
           <div class="contact-section__items">
 
-            <a :href="'tel: ' + phoneNumber[0].value" class="contact-section__item">
+            <a :href="'tel: ' + phoneNumberWithMask[0].value" class="contact-section__item">
               <svg width="22" height="22">
                 <use href="../assets/img/icons.svg#phone-2"></use>
               </svg>
               <span class="contact-section__bold">
-                {{ phoneNumber[0].value }}
+                {{ phoneNumberWithMask[0].value }}
               </span>
             </a>
 
@@ -280,7 +280,7 @@ export default {
   },
   data() {
     return {
-      serviceChosen: 'Хирургия',
+      serviceChosen: '',
       aboutSwiper: null,
       aboutCounter: 1,
       diseases: [],
@@ -318,6 +318,9 @@ export default {
     phoneNumber() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'number')
     },
+    phoneNumberWithMask() {
+      return this.$store.getters.loadedSettings.filter(item => item.key === 'number_mask1')
+    },
     schedule() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'schedule')
     },
@@ -354,6 +357,8 @@ export default {
         }
       }
     });
+
+    this.serviceChosen = this.loadedServices[0].name
   }
 }
 </script>

@@ -31,11 +31,11 @@
         </div>
       </div>
 
-      <a :href="'tel: ' + phoneNumber[0].value" class="footer__contact-box footer__contact-box--sm">
+      <a :href="'tel: ' + phoneNumberWithMask[0].value" class="footer__contact-box footer__contact-box--sm">
         <svg width="22" height="22">
           <use href="../assets/img/icons.svg#phone-3"></use>
         </svg>
-        {{ phoneNumber[0].value }}
+        {{ phoneNumberWithMask[0].value }}
       </a>
 
       <div class="footer__socials">
@@ -45,18 +45,18 @@
           </svg>
         </a>
 
-        <a href="#" class="footer__social">
+        <a :href="'https://wa.me/' + phoneNumber[0].value" class="footer__social">
           <svg width="36" height="36">
             <use href="../assets/img/icons.svg#wpp"></use>
           </svg>
         </a>
       </div>
 
-      <a :href="'tel: ' + phoneNumber[0].value" class="footer__contact-box">
+      <a :href="'tel: ' + phoneNumberWithMask[0].value" class="footer__contact-box">
         <svg width="22" height="22">
           <use href="../assets/img/icons.svg#phone-3"></use>
         </svg>
-        {{ phoneNumber[0].value }}
+        {{ phoneNumberWithMask[0].value }}
       </a>
 
     </div>
@@ -69,9 +69,13 @@ export default {
     phoneNumber() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'number')
     },
+    phoneNumberWithMask() {
+      return this.$store.getters.loadedSettings.filter(item => item.key === 'number_mask1')
+    },
     schedule() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'schedule')
     },
+
     mail() {
       return this.$store.getters.loadedSettings.filter(item => item.key === 'mail')
     },
